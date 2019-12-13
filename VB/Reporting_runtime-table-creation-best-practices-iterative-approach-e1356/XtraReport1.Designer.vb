@@ -24,19 +24,29 @@
         ''' </summary>
         Private Sub InitializeComponent()
             Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+            Me.topMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
+            Me.bottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
             CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
             ' 
             ' Detail
             ' 
-            Me.Detail.Height = 143
+            Me.Detail.HeightF = 143F
             Me.Detail.Name = "Detail"
             Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F)
             Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
             ' 
+            ' topMarginBand1
+            ' 
+            Me.topMarginBand1.Name = "topMarginBand1"
+            ' 
+            ' bottomMarginBand1
+            ' 
+            Me.bottomMarginBand1.Name = "bottomMarginBand1"
+            ' 
             ' XtraReport1
             ' 
-            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.Detail})
-            Me.Version = "8.3"
+            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.Detail, Me.topMarginBand1, Me.bottomMarginBand1})
+            Me.Version = "19.2"
             CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
         End Sub
@@ -44,5 +54,7 @@
         #End Region
 
         Private Detail As DevExpress.XtraReports.UI.DetailBand
+        Private topMarginBand1 As DevExpress.XtraReports.UI.TopMarginBand
+        Private bottomMarginBand1 As DevExpress.XtraReports.UI.BottomMarginBand
     End Class
 End Namespace
